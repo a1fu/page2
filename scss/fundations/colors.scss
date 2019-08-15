@@ -1,0 +1,25 @@
+@import "../tokens/colors.scss";
+
+@mixin text($color){
+  color: $color;
+}
+
+@mixin background($color){
+  background-color: $color;
+}
+
+//text colors
+.text-primary{ @include text($color-primary) }
+.text-secundary{ @include text($color-secundary) }
+.text-success{ @include text($color-success) }
+.text-danger{ @include text($color-danger) }
+.text-warning{ @include text($color-warning) }
+.text-info{ @include text($color-info) }
+
+//background colors
+.bg-primary{ @include background($color-primary) }
+.bg-secundary{ @include background($color-secundary) }
+.bg-success{ @include background($color-success) }
+.bg-danger{ @include background($color-danger) }
+.bg-warning{ @include background($color-warning) }
+.bg-info{ @include background($color-info) }

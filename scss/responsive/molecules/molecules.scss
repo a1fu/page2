@@ -1,0 +1,50 @@
+// moleculas
+
+.bx{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    &-img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60vw;
+        height: auto;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    &-layer1{
+        z-index: 3;
+        position: absolute;
+        white-space: nowrap;
+        font-family: $typo-VisbyCFExtra;
+        font-size: 430px;
+        line-height: 300px;
+        color: red;
+    }
+    &-layer2{
+        z-index: 1;
+        position: absolute;
+        left: -1vw;
+        white-space: nowrap;
+        font-family: $typo-VisbyCFExtra;
+        font-size: 120px;
+        line-height: 400px;
+        color: orange;
+        transform: translate(0, -100%);
+        -webkit-transform: translate(0, -100%);
+    }
+    &-layer3{
+        z-index: 2;
+        position: absolute;
+        right: -1vw;
+        width: 40vw;
+        color: palevioletred;
+        font-family: $typo-VisbyCFExtra;
+        font-size: 50px;
+        line-height: 60px;
+        text-align: right;
+    }
+}

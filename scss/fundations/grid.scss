@@ -1,0 +1,52 @@
+@import '../tokens/grid.scss';
+
+//container
+.grid {
+    display: grid;
+    grid-template-columns: repeat($grid-cols, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: $grid-medianil;
+    grid-row-gap: $grid-row;
+
+    min-width: $grid-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: $grid-break-md) {
+    .grid { min-width: $grid-break-md; width: $grid-width-md; }
+}
+
+@media (min-width: $grid-break-lg) {
+    .grid { min-width: $grid-break-lg; width: $grid-width-lg; }
+}
+
+@media (min-width: $grid-break-xl) {
+    .grid { min-width: $grid-break-xl; width: $grid-width-xl; }
+}
+
+//columns
+@for $i from 1 through $grid-cols {
+    .col-#{$i} { grid-column: span #{$i} }
+}
+
+//colums md
+@for $i from 1 through $grid-cols {
+    @media (min-width: $grid-break-md) {
+        .col-md-#{$i} { grid-column: span #{$i} }
+    }
+}
+
+//colums lg
+@for $i from 1 through $grid-cols {
+    @media (min-width: $grid-break-lg) {
+        .col-lg-#{$i} { grid-column: span #{$i} }
+    }
+}
+
+//colums xl
+@for $i from 1 through $grid-cols {
+    @media (min-width: $grid-break-xl) {
+        .col-xl-#{$i} { grid-column: span #{$i} }
+    }
+}

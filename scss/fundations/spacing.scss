@@ -1,0 +1,39 @@
+  
+@import '../tokens/spacing.scss';
+@import '../tokens/grid.scss';
+
+@for $i from 0 through $spacing-num {
+    .m-#{$i} { margin: $spacing * $i !important !important; }
+    .mt-#{$i} { margin-top: $spacing * $i !important; }
+    .mb-#{$i} { margin-bottom: $spacing * $i !important; }
+    .ml-#{$i} { margin-left: $spacing * $i !important; }
+    .mr-#{$i} { margin-right: $spacing * $i !important; }
+    .mx-#{$i} { margin-left: $spacing * $i; margin-right: $spacing * $i !important; }
+    .my-#{$i} { margin-top: $spacing * $i; margin-bottom: $spacing * $i !important; }
+
+    .p-#{$i} { padding: $spacing * $i !important; }
+    .pt-#{$i} { padding-top: $spacing * $i !important; }
+    .pb-#{$i} { padding-bottom: $spacing * $i !important; }
+    .pl-#{$i} { padding-left: $spacing * $i !important; }
+    .pr-#{$i} { padding-right: $spacing * $i !important; }
+    .px-#{$i} { padding-left: $spacing * $i; padding-right: $spacing * $i !important; }
+    .py-#{$i} { padding-top: $spacing * $i; padding-bottom: $spacing * $i !important; }
+}
+
+//margin auto
+.m-auto{ margin: auto; }
+.mt-auto{ margin-top: auto; }
+.mb-auto{ margin-bottom: auto; }
+.ml-auto{ margin-left: auto; }
+.mr-auto{ margin-right: auto; }
+.mx-auto{ margin-left: auto; margin-right: auto; }
+.my-auto{ margin-top: auto; margin-bottom: auto; }
+
+//padding auto
+.p-auto{ padding: auto; }
+.pt-auto{ padding-top: auto; }
+.pb-auto{ padding-bottom: auto; }
+.pl-auto{ padding-left: auto; }
+.pr-auto{ padding-right: auto; }
+.px-auto{ padding-left: auto; padding-right: auto; }
+.py-auto{ padding-top: auto; padding-bottom: auto; }

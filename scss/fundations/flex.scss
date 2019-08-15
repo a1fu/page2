@@ -1,0 +1,407 @@
+@import '../tokens/grid.scss';
+
+//flex
+.d-flex{ display: flex }
+.d-inline-flex{ display: inline-flex }
+
+//flex md
+@media (min-width: $grid-break-md) {
+    .d-md-flex{ display: flex }
+    .d-md-inline-flex{ display: inline-flex }
+}
+
+//flex lg
+@media (min-width: $grid-break-lg) {
+    .d-lg-flex{ display: flex }
+    .d-lg-inline-flex{ display: inline-flex }
+}
+
+//flex xl
+@media (min-width: $grid-break-xl) {
+    .d-xl-flex{ display: flex }
+    .d-xl-inline-flex{ display: inline-flex }
+}
+
+////////
+
+//order
+@for $i from 0 through $grid-cols {
+    .order-#{$i} { order: #{$i} }
+}
+
+//order md
+@for $i from 0 through $grid-cols {
+    @media (min-width: $grid-break-md) {
+        .order-md-#{$i} { order: #{$i} }
+    }
+}
+
+//order lg
+@for $i from 0 through $grid-cols {
+    @media (min-width: $grid-break-lg) {
+        .order-lg-#{$i} { order: #{$i} }
+    }
+}
+
+//order xl
+@for $i from 0 through $grid-cols {
+    @media (min-width: $grid-break-xl) {
+        .order-xl-#{$i} { order: #{$i} }
+    }
+}
+
+////////
+
+//flex row
+.flex-row { flex-direction: row }
+.flex-row-reverse { flex-direction: row-reverse }
+
+//flex row md
+@media (min-width: $grid-break-md) {
+    .flex-md-row { flex-direction: row }
+    .flex-md-row-reverse { flex-direction: row-reverse }
+}
+
+//flex row lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-row { flex-direction: row }
+    .flex-lg-row-reverse { flex-direction: row-reverse }
+}
+
+//flex row xl
+@media (min-width: $grid-break-md) {
+    .flex-xl-row { flex-direction: row }
+    .flex-xl-row-reverse { flex-direction: row-reverse }
+}
+
+////////
+
+//flex column
+.flex-column { flex-direction: column }
+.flex-column-reverse { flex-direction: column-reverse }
+
+//flex column md
+@media (min-width: $grid-break-md) {
+    .flex-md-column { flex-direction: column }
+    .flex-md-column-reverse { flex-direction: column-reverse }
+}
+
+//flex column lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-column { flex-direction: column }
+    .flex-lg-column-reverse { flex-direction: column-reverse }
+}
+
+//flex column xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-column { flex-direction: column }
+    .flex-xl-column-reverse { flex-direction: column-reverse }
+}
+
+////////
+
+//fill
+.flex-fill { flex: 1 1 auto }
+
+//fill md
+@media (min-width: $grid-break-md) {
+    .flex-md-fill { flex: 1 1 auto }
+}
+
+//fill lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-fill { flex: 1 1 auto }
+}
+
+//fill xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-fill { flex: 1 1 auto }
+}
+
+////////
+
+//grow
+.flex-grow-1 { flex-grow: 1 }
+
+//grow md
+@media (min-width: $grid-break-md) {
+    .flex-md-grow-1 { flex-grow: 1 }
+}
+
+//grow lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-grow-1 { flex-grow: 1 }
+}
+
+//grow xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-grow-1 { flex-grow: 1 }
+}
+
+////////
+
+//shrink
+.flex-shrink-1 { flex-shrink: 1 }
+
+//shrink md
+@media (min-width: $grid-break-md) {
+    .flex-md-shrink-1 { flex-shrink: 1 }
+}
+
+//shrink lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-shrink-1 { flex-shrink: 1 }
+}
+
+//shrink xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-shrink-1 { flex-shrink: 1 }
+}
+
+////////
+
+//wrap
+.flex-wrap { flex-wrap: wrap }
+
+//wrap md
+@media (min-width: $grid-break-md) {
+    .flex-md-wrap { flex-wrap: wrap }
+}
+
+//wrap lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-wrap { flex-wrap: wrap }
+}
+
+//wrap xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-wrap { flex-wrap: wrap }
+}
+
+////////
+
+//wrap reverse
+.flex-wrap-reverse { flex-wrap: wrap-reverse }
+
+//wrap reverse md
+@media (min-width: $grid-break-md) {
+    .flex-md-wrap-reverse { flex-wrap: wrap-reverse }
+}
+
+//wrap reverse lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-wrap-reverse { flex-wrap: wrap-reverse }
+}
+
+//wrap reverse xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-wrap-reverse { flex-wrap: wrap-reverse }
+}
+
+////////
+
+//nowrap
+.flex-nowrap { flex-wrap: nowrap }
+
+//nowrap md
+@media (min-width: $grid-break-md) {
+    .flex-md-nowrap { flex-wrap: nowrap }
+}
+
+//nowrap lg
+@media (min-width: $grid-break-lg) {
+    .flex-lg-nowrap { flex-wrap: nowrap }
+}
+
+//nowrap xl
+@media (min-width: $grid-break-xl) {
+    .flex-xl-nowrap { flex-wrap: nowrap }
+}
+
+////////
+
+//items
+.align-items-start{ align-items: flex-start }
+.align-items-center{ align-items: center }
+.align-items-end{ align-items: flex-end }
+.align-items-baseline{ align-items: baseline }
+.align-items-stretch{ align-items: stretch }
+
+.justify_items_start{ justify-items: flex-start }
+.justify_items_center{ justify-items: center }
+.justify_items_end{ justify-items: flex-end }
+.justify_items_baseline{ justify-items: baseline }
+.justify_items_stretch{ justify-items: stretch }
+
+//items md
+@media (min-width: $grid-break-md) {
+    .align-items-md-start{ align-items: flex-start }
+    .align-items-md-center{ align-items: center }
+    .align-items-md-end{ align-items: flex-end }
+    .align-items-md-baseline{ align-items: baseline }
+    .align-items-md-stretch{ align-items: stretch }
+
+    .justify_items-md_start{ justify-items: flex-start }
+    .justify_items-md_center{ justify-items: center }
+    .justify_items-md_end{ justify-items: flex-end }
+    .justify_items-md_baseline{ justify-items: baseline }
+    .justify_items-md_stretch{ justify-items: stretch }
+}
+
+//items lg
+@media (min-width: $grid-break-lg) {
+    .align-items-lg-start{ align-items: flex-start }
+    .align-items-lg-center{ align-items: center }
+    .align-items-lg-end{ align-items: flex-end }
+    .align-items-lg-baseline{ align-items: baseline }
+    .align-items-lg-stretch{ align-items: stretch }
+
+    .justify_items-lg_start{ justify-items: flex-start }
+    .justify_items-lg_center{ justify-items: center }
+    .justify_items-lg_end{ justify-items: flex-end }
+    .justify_items-lg_baseline{ justify-items: baseline }
+    .justify_items-lg_stretch{ justify-items: stretch }
+}
+
+//items xl
+@media (min-width: $grid-break-xl) {
+    .align-items-xl-start{ align-items: flex-start }
+    .align-items-xl-center{ align-items: center }
+    .align-items-xl-end{ align-items: flex-end }
+    .align-items-xl-baseline{ align-items: baseline }
+    .align-items-xl-stretch{ align-items: stretch }
+
+    .justify_items-xl_start{ justify-items: flex-start }
+    .justify_items-xl_center{ justify-items: center }
+    .justify_items-xl_end{ justify-items: flex-end }
+    .justify_items-xl_baseline{ justify-items: baseline }
+    .justify_items-xl_stretch{ justify-items: stretch }
+}
+
+///////
+
+//self
+.align-self-start{ align-self: flex-start }
+.align-self-center{ align-self: center }
+.align-self-end{ align-self: flex-end }
+.align-self-baseline{ align-self: baseline }
+.align-self-stretch{ align-self: stretch }
+
+.justify-self-start{ justify-self: flex-start }
+.justify-self-center{ justify-self: center }
+.justify-self-end{ justify-self: flex-end }
+.justify-self-baseline{ justify-self: baseline }
+.justify-self-stretch{ justify-self: stretch }
+
+//self md
+@media (min-width: $grid-break-md) {
+    .align-self-md-start{ align-self: flex-start }
+    .align-self-md-center{ align-self: center }
+    .align-self-md-end{ align-self: flex-end }
+    .align-self-md-baseline{ align-self: baseline }
+    .align-self-md-stretch{ align-self: stretch }
+
+    .justify-self-md-start{ justify-self: flex-start }
+    .justify-self-md-center{ justify-self: center }
+    .justify-self-md-end{ justify-self: flex-end }
+    .justify-self-md-baseline{ justify-self: baseline }
+    .justify-self-md-stretch{ justify-self: stretch }
+}
+
+//self lg
+@media (min-width: $grid-break-lg) {
+    .align-self-lg-start{ align-self: flex-start }
+    .align-self-lg-center{ align-self: center }
+    .align-self-lg-end{ align-self: flex-end }
+    .align-self-lg-baseline{ align-self: baseline }
+    .align-self-lg-stretch{ align-self: stretch }
+
+    .justify-self-lg-start{ justify-self: flex-start }
+    .justify-self-lg-center{ justify-self: center }
+    .justify-self-lg-end{ justify-self: flex-end }
+    .justify-self-lg-baseline{ justify-self: baseline }
+    .justify-self-lg-stretch{ justify-self: stretch }
+}
+
+//self xl
+@media (min-width: $grid-break-xl) {
+    .align-self-xl-start{ align-self: flex-start }
+    .align-self-xl-center{ align-self: center }
+    .align-self-xl-end{ align-self: flex-end }
+    .align-self-xl-baseline{ align-self: baseline }
+    .align-self-xl-stretch{ align-self: stretch }
+
+    .justify-self-xl-start{ justify-self: flex-start }
+    .justify-self-xl-center{ justify-self: center }
+    .justify-self-xl-end{ justify-self: flex-end }
+    .justify-self-xl-baseline{ justify-self: baseline }
+    .justify-self-xl-stretch{ justify-self: stretch }   
+}
+
+///////
+
+//content
+.align-content-start{ align-content: flex-start }
+.align-content-center{ align-content: center }
+.align-content-end{ align-content: flex-end }
+.align-content-around{ align-content: space-around }
+.align-content-between{ align-content: space-between }
+.align-content-stretch{ align-content: stretch }
+
+.justify-content-start{ justify-content: flex-start }
+.justify-content-center{ justify-content: center }
+.justify-content-end{ justify-content: flex-end }
+.justify-content-around{ justify-content: space-around }
+.justify-content-between{ justify-content: space-between }
+.justify-content-stretch{ justify-content: stretch }
+
+//content md
+@media (min-width: $grid-break-md) {
+    .align-content-md-start{ align-content: flex-start }
+    .align-content-md-center{ align-content: center }
+    .align-content-md-end{ align-content: flex-end }
+    .align-content-md-around{ align-content: space-around }
+    .align-content-md-between{ align-content: space-between }
+    .align-content-md-stretch{ align-content: stretch }
+
+    .justify-content-md-start{ justify-content: flex-start }
+    .justify-content-md-center{ justify-content: center }
+    .justify-content-md-end{ justify-content: flex-end }
+    .justify-content-md-around{ justify-content: space-around }
+    .justify-content-md-between{ justify-content: space-between }
+    .justify-content-md-stretch{ justify-content: stretch }
+}
+
+//content lg
+@media (min-width: $grid-break-lg) {
+    .align-content-lg-start{ align-content: flex-start }
+    .align-content-lg-center{ align-content: center }
+    .align-content-lg-end{ align-content: flex-end }
+    .align-content-lg-around{ align-content: space-around }
+    .align-content-lg-between{ align-content: space-between }
+    .align-content-lg-stretch{ align-content: stretch }
+
+    .justify-content-lg-start{ justify-content: flex-start }
+    .justify-content-lg-center{ justify-content: center }
+    .justify-content-lg-end{ justify-content: flex-end }
+    .justify-content-lg-around{ justify-content: space-around }
+    .justify-content-lg-between{ justify-content: space-between }
+    .justify-content-lg-stretch{ justify-content: stretch }
+}
+
+//content xl
+@media (min-width: $grid-break-xl) {
+    .align-content-xl-start{ align-content: flex-start }
+    .align-content-xl-center{ align-content: center }
+    .align-content-xl-end{ align-content: flex-end }
+    .align-content-xl-around{ align-content: space-around }
+    .align-content-xl-between{ align-content: space-between }
+    .align-content-xl-stretch{ align-content: stretch }
+
+    .justify-content-xl-start{ justify-content: flex-start }
+    .justify-content-xl-center{ justify-content: center }
+    .justify-content-xl-end{ justify-content: flex-end }
+    .justify-content-xl-around{ justify-content: space-around }
+    .justify-content-xl-between{ justify-content: space-between }
+    .justify-content-xl-stretch{ justify-content: stretch }
+}

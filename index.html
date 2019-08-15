@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Festival Ceremonia</title>
+    <meta name="lang" content="es" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="address=no,email=no,telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css">
+    
+</head>
+<body>
+
+    <div class="bx">
+        <img class="bx-img" src="./img/Foto_Landing.jpg" alt="Foto_Landing">
+        <h1 class="bx-layer1" >Festival Ceremonia 2020</h1>
+        <ul class="bx-layer2">
+            <li>En la Ciudad de México</li>
+            <li>En la Ciudad de México</li>
+            <li>En la Ciudad de México</li>
+            <li>En la Ciudad de México</li>
+            <li>En la Ciudad de México</li>
+        </ul>
+        <p class="bx-layer3" >Festival Ceremonia ahora en el corazón de la Ciudad de México. ·  Llevamos 8 años trabajando en unir la música y la diversión como el camino más fuerte para buscar que nuestra comunidad redefina las reglas de convivencia, donde la empatía, inclusión y diversidad se volvieron nuestras mayores fortalezas. ·  En esta nueva década las conversaciones empiezan en un siguiente escalón, a través de la música comulgamos con diferentes filosofías, preferencias sexuales, géneros y no géneros, para ver que el ecosistema que se crea cada año en el festival, puede existir fuera. ·  La cultura ha demostrado ser uno de los motores más fuertes de cambio. · Queremos ser un espacio en el que las diferencias sean virtudes y los prejuicios estén superados. · Somos la generación de jóvenes más grande de la historia. · 2020: el inicio de una nueva década.</p>
+    </div>
+
+    <script type="text/javascript" src="./js/assets/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="./js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="./js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <script>
+        var controller = new ScrollMagic.Controller()
+
+        var parrallix1 = {
+            duration: 10,
+            positionXstart: $(window).width(),
+            positionXend: $(window).width() * 10
+        }
+        var parrallix2 = {
+            duration: 10,
+            positionXstart: $(window).height() * 0.45,
+            positionXend: $(window).height() * 8
+        }
+        var parrallix3 = {
+            duration: 30,
+            positionXstart: $(window).height() * 0.85,
+            positionXend: $(window).height() * 10
+        }
+
+        var tween1 = new TimelineMax ()
+            .add([
+                TweenMax.fromTo(".bx-layer1", 1, {scale: 1, autoAlpha: .9, left: parrallix1.positionXstart}, {left: -parrallix1.positionXend, ease: Linear.easeNone}),
+            ])
+        var scene1 = new ScrollMagic.Scene({triggerHook: 0, duration: ($(window).height() * parrallix1.duration)})
+            .setTween(tween1)
+            .addIndicators()
+            .addTo(controller)
+        
+        //////
+
+        var tween2 = new TimelineMax ()
+            .add([
+                TweenMax.fromTo(".bx-layer2", 1, {scale: 1, autoAlpha: .9, top: parrallix2.positionXstart}, {top: parrallix2.positionXend, ease: Linear.easeNone}),
+            ])
+        var scene2 = new ScrollMagic.Scene({triggerHook: 0, duration: ($(window).height() * parrallix2.duration)})
+            .setTween(tween2)
+            // .addIndicators()
+            .addTo(controller)
+
+        //////
+
+        var tween3 = new TimelineMax ()
+            .add([
+                TweenMax.fromTo(".bx-layer3", 1, {scale: 1, autoAlpha: .9, top: parrallix3.positionXstart}, {top: -parrallix3.positionXend, ease: Linear.easeNone}),
+            ])
+        var scene3 = new ScrollMagic.Scene({triggerHook: 0, duration: ($(window).height() * parrallix3.duration)})
+            .setTween(tween3)
+            // .addIndicators()
+            .addTo(controller)
+        
+    </script>
+
+    <!---->
+
+    <script type="text/javascript" src="./js/code.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+//responsive
+
+// plugins
+@import '../plugins/normalize.scss';
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    @include border-box;
+}
+
+//fundations
+// @import '../fundations/grid.scss';
+// @import '../fundations/flex.scss';
+// @import '../fundations/colors.scss';
+@import '../fundations/typo.scss';
+// @import '../fundations/spacing.scss';
+// @import '../fundations/borders.scss';
+
+//atomos
+@import './atoms/atoms.scss';
+
+//components
+@import './molecules/molecules.scss';
